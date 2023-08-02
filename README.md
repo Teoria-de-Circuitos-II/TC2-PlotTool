@@ -1,5 +1,8 @@
 # PlotTool TC2022 Grupo 2
 
+## Notas para alumnos TCII 2023
+Si el path del .csv que carguen incluye la palabra "rigol" (sin importar mayúsculas o minúsculas) el archivo será procesado de manera especial para permitir tomar los datos con el formato del osciloscopio directamente. Lo mismo ocurre con "agilent". Si se utiliza un .csv que no cumple estas condiciones, se lee de la manera trivial. Esto se resume en que si guardan las mediciones en una carpeta con el nombre de la marca del osciloscopio, las cosas funcionan mejor.
+
 ## Consigna
 ### Inputs
 - Mediante una función transferencia de orden arbitrario.
