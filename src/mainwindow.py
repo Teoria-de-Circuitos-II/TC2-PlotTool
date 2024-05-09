@@ -952,6 +952,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                             if(dl.name != '' and dl.name[0] != '_'):
                                 plotlist.append(line)
                         except ValueError:
+                            # print(len(x), len(y))
                             self.statusbar.showMessage('Wrong data source matching', 2000)
             if(self.plt_legendpos.currentText() == 'None'):
                 canvas.ax.get_legend().remove()
