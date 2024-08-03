@@ -1,17 +1,41 @@
 # PlotTool TC2022 Grupo 2
 
-## Notas para alumnos TCII 2023
-Si el path del .csv que carguen incluye la palabra "rigol" (sin importar mayúsculas o minúsculas) el archivo será procesado de manera especial para permitir tomar los datos con el formato del osciloscopio directamente. Lo mismo ocurre con "agilent". Si se utiliza un .csv que no cumple estas condiciones, se lee de la manera trivial. Esto se resume en que si guardan las mediciones en una carpeta con el nombre de la marca del osciloscopio, las cosas funcionan mejor. Ignoren las otras pestañas que se desactivaron, son una herramienta que nos servirá más tarde.
+## Utilización
 
-Pueden correr la tool mediante `python main.py` si instalaron todas las dependencias presentes en `requirements.txt`. Alternativamente, con `PyInstaller` pueden compilarla en un ejecutable a través de `setup.py`.
+Crear el venv
+
+    python -m venv venv
+
+Para activar el venv en Windows desde la terminal del sistema operativo:
+
+    venv\Scripts\activate.bat
+
+Para activar el venv en Windows desde Git Bash
+
+    . venv/Scripts/activate
+
+Para activar el venv en Linux
+
+    . venv/bin/activate
+
+Instalar dependencias
+
+    pip install -r requirements.txt
+
+Correr el programa
+
+    python main.py
 
 ## Consigna
+
 ### Inputs
+
 - Mediante una función transferencia de orden arbitrario.
 - Extraı́dos de una simulación de LTspice.
 - Extraı́dos de un archivo CSV donde se almacenaron mediciones.
 
 ### Obligatorios
+
 - Especificar la etiqueta de los ejes X e Y, como ası́ también poder agregar un tı́tulo de ser necesario.
 - Guardar el resultado del gráfico como imagen.
 - Borrar los gráficos sin necesidad de cerrar la herramienta.
@@ -20,6 +44,7 @@ Pueden correr la tool mediante `python main.py` si instalaron todas las dependen
 - Representación de polos y ceros en el plano solo para cuando se escribe una transferencia de orden N.
 
 ### Opcionales
+
 - “Togglear” cada curva (mostrar/ocultar)
 - Cambiar los labels de las curvas.
 - Cambiar el color de las mismas.
@@ -29,6 +54,7 @@ Pueden correr la tool mediante `python main.py` si instalaron todas las dependen
 - Cualquier otra cosa
 
 ## Features
+
 El flujo de trabajo consiste en cargar ''datasets'', a partir de los cuales se pueden generar ''datalines'' personalizadas y permitiendo configurar los gráficos en los que aparece cada línea.
 
 - Cargar más de un archivo como dataset, ya sea seleccionándolos en ''Import files'' o arrastrándolos directamente desde el explorador de archivos.
