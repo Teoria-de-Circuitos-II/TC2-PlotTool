@@ -28,7 +28,7 @@ class TFDialog(QtWidgets.QDialog, Ui_tf_window):
 
     def drawExpression(self, txt):
         try:
-            self.validateTF()
+            self.processTFValues()
             canvas = self.expr_plot.canvas
             canvas.ax.clear()
             canvas.ax.set_axis_off()
@@ -41,7 +41,6 @@ class TFDialog(QtWidgets.QDialog, Ui_tf_window):
                            transform=canvas.ax.transAxes)
             canvas.draw()
         except:
-            print("Error plotting TF.")
             pass
 
     def validateTF(self):
@@ -51,5 +50,4 @@ class TFDialog(QtWidgets.QDialog, Ui_tf_window):
         if  self.validateTF():
             self.error_label.clear()
         else:
-            print("Error plotting TF.")
             self.error_label.setText("Revise function expression")
